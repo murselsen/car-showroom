@@ -74,7 +74,7 @@
 
 .Content .CategoryList .CategoryCard {
   width: 368px;
-  min-width: 368px;
+  /* min-width: 368px; */
   height: 218px;
   background: #ffffff;
   padding: 30px 28px;
@@ -149,7 +149,7 @@
   }
   .Content .CategoryList .CategoryCard {
     width: 100%;
-    max-width: 50px;
+    max-width: 350px;
     margin-bottom: 20px;
   }
 }
