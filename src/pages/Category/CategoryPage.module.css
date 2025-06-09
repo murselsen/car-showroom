@@ -130,3 +130,26 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .Page {
+    padding: 20px;
+    height: 100%;
+  }
+  .HoverCategory .HoverImage {
+    width: 150px;
+    height: 150px;
+  }
+  .Content {
+    padding-inline: 20px;
+  }
+  .Content .CategoryList {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Content .CategoryList .CategoryCard {
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+  }
+}
