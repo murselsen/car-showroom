@@ -5,21 +5,33 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 35px 80px;
+  padding: 35px;
 }
 .Content {
   display: flex;
   flex-direction: column;
+  padding-inline: 80px;
 }
 .Content .Header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .Content .CategoryList {
   display: flex;
+  justify-content: space-between;
   gap: 30px;
   width: 100%;
   overflow: auto; /* Scroll aktif */
   -webkit-overflow-scrolling: touch;
+  padding: 0 10px;
+  border-radius: 35px;
+  /* border: 1px solid black; */
+}
+
+.Content .CategoryList:hover {
+  padding-block: 10px;
 }
 
 .Content .CategoryList::-webkit-scrollbar {
@@ -36,7 +48,14 @@
   animation: scale-i-o 2s ease-in-out;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
+
+.Content .CategoryList .CategoryCard:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  /* scale: 1.01; */
+}
+
 .CategoryCard .CardDetail {
   display: flex;
   flex-direction: column;
