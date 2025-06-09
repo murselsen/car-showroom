@@ -7,15 +7,53 @@
   justify-content: space-between;
   padding: 35px;
 }
+
+.Page .HoverCategory {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.HoverCategory .HoverTitle {
+  font-size: 3rem;
+  color: #0a0a0a;
+  font-weight: 600;
+  font-family: var(--font-audiowide);
+}
+.HoverCategory .HoverImage {
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
+}
+.HoverCategory .HoverHr {
+  width: 30%;
+  height: 1px;
+  background-color: #cccccc83;
+  margin: 20px 0;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+}
+
 .Content {
   display: flex;
   flex-direction: column;
   padding-inline: 80px;
+  gap: 20px;
 }
 .Content .Header {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-inline: 20px;
+}
+
+.Header .Title {
+  font-size: 2.5rem;
+  color: #0a0a0a;
+  font-weight: 600;
+  font-family: var(--font-orbitron);
 }
 
 .Content .CategoryList {
@@ -25,13 +63,9 @@
   width: 100%;
   overflow: auto; /* Scroll aktif */
   -webkit-overflow-scrolling: touch;
-  padding: 0 10px;
+  padding: 10px;
   border-radius: 35px;
   /* border: 1px solid black; */
-}
-
-.Content .CategoryList:hover {
-  padding-block: 10px;
 }
 
 .Content .CategoryList::-webkit-scrollbar {
@@ -49,11 +83,12 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  transition: scale 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .Content .CategoryList .CategoryCard:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
-  /* scale: 1.01; */
+  scale: 1.01;
 }
 
 .CategoryCard .CardDetail {
@@ -64,13 +99,16 @@
 
 .CategoryCard .CardDetail .CardDescription {
   font-size: 1rem;
+  font-family: var(--font-audiowide);
+  font-weight: 100;
   color: #a0a0a0;
 }
 
 .CategoryCard .CardDetail .CardTitle {
-  font-size: 1.9rem;
+  font-size: 1.65rem;
   color: #0a0a0a;
   font-weight: 600;
+  font-family: var(--font-orbitron);
 }
 
 .CategoryCard .CardImage {
