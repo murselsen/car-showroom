@@ -146,6 +146,8 @@
   .Content .CategoryList {
     flex-direction: column;
     align-items: center;
+    height: 150px;
+    overflow-y: auto;
   }
   .Content .CategoryList .CategoryCard {
     width: 100%;
