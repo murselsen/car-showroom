@@ -1,8 +1,9 @@
 import Navbar from "../../Components/Navbar/Navbar";
 import Css from "./CategoryPage.module.css";
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { categorySelector } from "../../redux/category";
+import { useDispatch, useSelector } from "react-redux";
+import { categorySelector, categoryActions } from "../../redux/category";
+import { useNavigate } from "react-router-dom";
 
 const CategoryPage = () => {
   const selectCategories = useSelector(categorySelector.selectCategories);
@@ -57,10 +58,19 @@ const CategoryPage = () => {
 };
 
 const CategoryCard = ({ id, name, icon, onHover }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigateToCategory = () => {
+    navigate("/" + name, { replace: true });
+  };
   return (
     <li
       className={Css.CategoryCard}
       onMouseOverCapture={() => onHover({ name, icon })}
+      onClick={() => {
+        navigateToCategory();
+        dispatch(categoryActions.setSelectedCategory({ id, name, icon }));
+      }}
     >
       <div className={Css.CardDetail}>
         <p className={Css.CardDescription}>#{id}</p>
