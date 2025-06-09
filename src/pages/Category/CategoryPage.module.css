@@ -33,7 +33,34 @@
   background: #ffffff;
   padding: 30px 28px;
   border-radius: 30px;
-  animation: scale-i-o 1.5s ease-in-out;
+  animation: scale-i-o 2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+.CategoryCard .CardDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.CategoryCard .CardDetail .CardDescription {
+  font-size: 1rem;
+  color: #a0a0a0;
+}
+
+.CategoryCard .CardDetail .CardTitle {
+  font-size: 1.9rem;
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.CategoryCard .CardImage {
+  align-self: flex-end;
+}
+.CategoryCard .CardImage .Image {
+  width: 125px;
+  height: 100px;
+  object-fit: cover;
 }
 
 @keyframes scale-i-o {

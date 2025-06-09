@@ -22,8 +22,8 @@ const CategoryPage = () => {
           }}
         >
           {selectCategories &&
-            selectCategories.map(({ id, name }, index) => (
-              <CategoryCard key={index} id={id} name={name} />
+            selectCategories.map(({ id, name, icon }, index) => (
+              <CategoryCard key={index} id={id} name={name} icon={icon} />
             ))}
         </ul>
       </div>
@@ -31,7 +31,7 @@ const CategoryPage = () => {
   );
 };
 
-const CategoryCard = ({ id, name }) => {
+const CategoryCard = ({ id, name, icon }) => {
   return (
     <li className={Css.CategoryCard}>
       <div className={Css.CardDetail}>
@@ -39,7 +39,7 @@ const CategoryCard = ({ id, name }) => {
         <h2 className={Css.CardTitle}>{name}</h2>
       </div>
       <div className={Css.CardImage}>
-        <img src="#" alt="Category" className={Css.Image} />
+        <img src={icon} alt="Category" className={Css.Image} />
       </div>
     </li>
   );

@@ -28,6 +28,7 @@ const vehicleSlice = createSlice({
     }),
       builder.addCase(FETCH_VEHICLES_FULFILLED, (state, action) => {
         state.isLoading = false;
+        
         state.vehicles = action.payload;
         state.error = null;
       }),
