@@ -13,17 +13,21 @@ const CategoryPage = () => {
   return (
     <div className={Css.Page}>
       <Navbar />
-      {selectCategory && (
-        <div className={Css.HoverCategory}>
-          <h1 className={Css.HoverTitle}>{selectCategory.name}</h1>
-          <hr className={Css.HoverHr} />
-          <img
-            src={selectCategory.icon}
-            alt="Hover Category"
-            className={Css.HoverImage}
-          />
-        </div>
-      )}
+
+      <div className={Css.HoverCategory}>
+        {selectCategory && (
+          <>
+            <h1 className={Css.HoverTitle}>{selectCategory.name}</h1>
+            <hr className={Css.HoverHr} />
+            <img
+              src={selectCategory.icon}
+              alt="Hover Category"
+              className={Css.HoverImage}
+            />
+          </>
+        )}
+      </div>
+
       <div className={Css.Content}>
         <div className={Css.Header}>
           <p className={Css.Description}>Please select one of the categories</p>

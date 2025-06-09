@@ -134,8 +134,16 @@
 @media (max-width: 768px) {
   .Page {
     padding: 20px;
-    height: 100%;
+    height: 100vh;
+    justify-content: space-around;
   }
+
+  .HoverCategory {
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+  }
+
   .HoverCategory .HoverImage {
     width: 150px;
     height: 150px;
@@ -143,15 +151,20 @@
   .Content {
     padding-inline: 20px;
   }
+
+  .HoverCategory .HoverTitle {
+    font-size: 1.8rem;
+  }
   .Content .CategoryList {
     flex-direction: column;
     align-items: center;
-    height: 150px;
+    height: 250px;
     overflow-y: auto;
   }
   .Content .CategoryList .CategoryCard {
     width: 100%;
     max-width: 350px;
     margin-bottom: 20px;
+    flex-direction: column;
   }
 }
