@@ -1,0 +1,29 @@
+.Navbar {
+  width: 100%;
+}
+.Navbar .List {
+  display: flex;
+}
+.Navbar .List .Item::after {
+  content: "/";
+  color: #a0a0a0;
+  font-size: 1.5rem;
+  margin-inline: 15px;
+}
+.Navbar .List .Item:last-child::after {
+  content: "";
+}
+
+.Navbar .List .Item .Link {
+  padding: 11px 45px;
+  border: 1px solid #ccc;
+  color: #0a0a0a;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.Navbar .List .Item:last-child .Link {
+  background-color: #0a0a0a;
+  color: #fff;
+  border: none;
+}

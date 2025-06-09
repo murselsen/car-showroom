@@ -1,0 +1,48 @@
+.Page {
+  background-color: var(--background);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 80px;
+}
+.Content {
+  display: flex;
+  flex-direction: column;
+}
+.Content .Header {
+}
+
+.Content .CategoryList {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  overflow: auto; /* Scroll aktif */
+  -webkit-overflow-scrolling: touch;
+}
+
+.Content .CategoryList::-webkit-scrollbar {
+  display: none;
+}
+
+.Content .CategoryList .CategoryCard {
+  width: 368px;
+  min-width: 368px;
+  height: 218px;
+  background: #ffffff;
+  padding: 30px 28px;
+  border-radius: 30px;
+  animation: scale-i-o 1.5s ease-in-out;
+}
+
+@keyframes scale-i-o {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
