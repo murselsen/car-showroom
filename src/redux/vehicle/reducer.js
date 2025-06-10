@@ -21,6 +21,9 @@ const vehicleSlice = createSlice({
     setSelectedVehicle: (state, action) => {
       state.selectedVehicle = action.payload;
     },
+    resetSelectedVehicle: (state) => {
+      state.selectedVehicle = null;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(FETCH_VEHICLES_PENDING, (state) => {
@@ -28,7 +31,7 @@ const vehicleSlice = createSlice({
     }),
       builder.addCase(FETCH_VEHICLES_FULFILLED, (state, action) => {
         state.isLoading = false;
-        
+
         state.vehicles = action.payload;
         state.error = null;
       }),

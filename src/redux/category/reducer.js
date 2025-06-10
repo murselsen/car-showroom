@@ -17,6 +17,9 @@ const categorySlice = createSlice({
     setSelectedCategory: (state, action) => {
       state.selectedCategory = action.payload;
     },
+    resetSelectedCategory: (state) => {
+      state.selectedCategory = null;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(FETCH_CATEGORIES_PENDING, (state) => {

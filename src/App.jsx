@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { useDispatch } from "react-redux";
 import { vehicleOperations } from "./redux/vehicle";
-import { categoryOperations } from "./redux/category";
+import {  categoryOperations } from "./redux/category";
 
 // Components
 
@@ -16,6 +16,7 @@ function App() {
   useEffect(() => {
     dispatch(vehicleOperations.fetchVehicles());
     dispatch(categoryOperations.fetchCategories());
+   
   }, [dispatch]);
 
   return (
