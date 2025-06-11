@@ -2,7 +2,7 @@
 import * as actions from "./actions";
 import * as selectors from "./selectors";
 import * as operations from "./operations";
-import vehicleReducer from "./reducer";
+import vehicleReducer from "./slice";
 
 // Exporting actions, selectors, and the reducer
 export {
